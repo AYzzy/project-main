@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;
+            background-color: #f6f6f6; /* Light gray background */
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff; /* White container background */
+        }
+
+        .header {
+            padding: 20px;
+            text-align: center;
+            background-color: #547980; /* Greenish blue */
+            color: #ffffff; /* White text */
+            border-radius: 5px 5px 0 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content p {
+            color: #333333; /* Dark gray text */
+            margin-bottom: 15px;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #78a355; /* Olive green */
+            color: #ffffff; /* White text */
+            text-decoration: auto;
+            border-radius: 5px;
+        }
+
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #547980; /* Greenish blue */
+            color: #ffffff; /* White text */
+            border-radius: 0 0 5px 5px;
+        }
+
+        .footer a {
+            color: #ffffff; /* White text */
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+<table class="body-wrap">
+    <tbody>
+    <tr>
+        <td></td>
+        <td class="container">
+            <div class="header">
+                <h1>Jhargoh<->Store</h1>
+                <p>Please Verify Your Email Address</p>
+            </div>
+            <div class="content">
+                <p>Hello <strong th:text="${name}"></strong>,</p>
+                <p>My name is engineer ayomide abdurahman, and I am very happy to welcome you to my store!</p>
+                <p>You joined thousands of users who are already skyrocketing their sales with my company by saving at least 60% on all items.</p>
+                <p>There's just one more tiny step you need to take to achieve all these amazing things. Please click below to verify your new account:</p>
+                <a class="btn-primary" th:href="${url}">Verify Your Account</a>
+            </div>
+            <div class="footer">
+                <p>Thanks for choosing <strong>Our</strong> Company.</p>
+                <p><a href="#">Unsubscribe</a> from these alerts.</p>
+            </div>
+        </td>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
